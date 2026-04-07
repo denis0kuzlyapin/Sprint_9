@@ -55,7 +55,7 @@
 
 ## 🚀 Установка и запуск
 
-### pip install -r requirements.txt
+### pip install -r requirements.txt -- установка зависимостей
 ### allure generate allure-results -o allure-report --clean
 ### allure serve allure-results
 ### allure open allure-report
