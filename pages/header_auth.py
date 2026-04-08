@@ -9,19 +9,15 @@ class HeaderAuth(BasePage):
 
     def logout(self):
         self.click(self.locators.logout_btn)
-        return self
 
     def is_logout_btn_visible(self):
         return self.is_element_visible(self.locators.logout_btn)
 
     def wait_visible_logout_btn(self):
         self.wait_visible(self.locators.logout_btn)
-        return self
 
     def wait_clickable_create_recipe(self):
         self.wait_clickable(self.locators.create_recipe)
-        return self
 
     def click_create_recipe(self):
         self.click(self.locators.create_recipe)
-        return self
