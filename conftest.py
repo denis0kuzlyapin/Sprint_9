@@ -1,10 +1,11 @@
 import pytest
+
 from pages.header_auth import HeaderAuth
+from helpers import BrowserFactory
 
 
 @pytest.fixture(params=["chrome"])
 def driver(request):
-    from helpers import BrowserFactory
 
     driver = BrowserFactory.get_driver(request.param, headless=False)
     driver.delete_all_cookies()

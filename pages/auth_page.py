@@ -1,5 +1,5 @@
 from constants import Url
-from helpers import GenDataForUser
+from data import TestUser
 from pages.base_page import BasePage
 from locators.base_locators import BaseLocators
 from locators.auth_locators import AuthLocators
@@ -20,13 +20,10 @@ class AuthPage(BasePage):
 
     def click_enter_button(self):
         self.click(self.locators.enter_btn)
-        return self
 
     def login_with_static_data(self):
-        self.send_keys(self.base_locators.email_input, GenDataForUser.static_username())
-        self.send_keys(
-            self.base_locators.password_input, GenDataForUser.static_password()
-        )
+        self.send_keys(self.base_locators.email_input, TestUser.USERNAME)
+        self.send_keys(self.base_locators.password_input, TestUser.PASSWORD)
+
         self.click(self.locators.enter_btn)
         self.wait_url_to_be(Url.RECIPES_URL)
-        return self

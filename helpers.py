@@ -80,21 +80,6 @@ class GenDataForUser:
         username = f"test{GenDataForUser.generate_random_string(8)}"
         return username
 
-    @staticmethod
-    def static_password():
-        static_password = "test12345678"
-        return static_password
-
-    @staticmethod
-    def static_email():
-        static_email = "Test_login_page@yandex.ru"
-        return static_email
-
-    @staticmethod
-    def static_username():
-        static_username = "testTestovich"
-        return static_username
-
 
 class DataForRecipe:
 

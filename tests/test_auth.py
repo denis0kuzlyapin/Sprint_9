@@ -11,7 +11,6 @@ class TestAuthUser:
     @allure.title("Авторизация пользователя")
     def test_auth_user(self, driver, logout_after_test):
 
-        base_page = BasePage(driver)
         header_auth_page = HeaderAuth(driver)
         auth_page = AuthPage(driver)
 
@@ -25,7 +24,7 @@ class TestAuthUser:
             header_auth_page.wait_visible_logout_btn()
 
         with allure.step("Сохранить текущий url"):
-            current_url_auth = base_page.get_current_url()
+            current_url_auth = auth_page.get_current_url()
 
         with allure.step("Убедиться, что произошёл переход на главную страницу"):
             assert current_url_auth == Url.RECIPES_URL

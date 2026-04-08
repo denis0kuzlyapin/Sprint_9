@@ -89,7 +89,6 @@ class BasePage:
     def send_keys_to_hidden_element(self, locator, value):
         element = self.wait.until(EC.presence_of_element_located(locator))
         element.send_keys(value)
-        return self
 
     def click_with_retry(self, locator, max_attempts=3):
         for attempt in range(max_attempts):

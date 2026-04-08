@@ -19,3 +19,10 @@ class RecipeData:
     @staticmethod
     def get_description():
         return DataForRecipe.generate_description()
+
+
+class TestUser:
+
+    EMAIL = "Test_login_page@yandex.ru"
+    PASSWORD = "test12345678"
+    USERNAME = "testTestovich"
